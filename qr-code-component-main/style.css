@@ -29,7 +29,7 @@ body {
 
 .qr-wrapper {
   display: flex;
-  max-width: 17rem;
+  max-width: 20rem;
   margin: auto;
   flex-direction: column;
   border-radius: 10px;
