@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Slate_300: hsl(212, 45%, 89%);
+  --Slate_500: hsl(216, 15%, 48%);
+  --Slate_900: hsl(218, 44%, 22%);
+
+  --paragraph-size: 1rem;
+  --header-size: 1.25rem;
+}
+
+body {
+  background: var(--Slate_300);
+}
+
+.qr {
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+  margin: 1rem;
+}
+
+.qr-wrapper {
+  display: flex;
+  max-width: 17rem;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 10px;
+  background: var(--White);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  gap: 1rem;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.qr-img {
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.qr-header {
+  color: var(--Slate_900);
+  font-size: var(--header-size);
+}
+
+.qr-content {
+  color: var(--Slate_500);
+  font-size: var(--paragraph-size);
+  padding-bottom: 1rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
