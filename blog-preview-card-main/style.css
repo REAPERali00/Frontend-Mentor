@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* <========== Colors ==========> */
+  --Yellow: hsl(47, 88%, 63%);
+  --White: hsl(0, 0%, 100%);
+  --Gray-500: hsl(0, 0%, 42%);
+  --Gray-950: hsl(0, 0%, 7%);
+
+  /* <========== font size ==========> */
+  --normal: 1rem;
+  --header: 2rem;
+}
+
+body {
+  background-color: var(--Yellow);
+}
+
+#card {
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+}
+
+.card {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  max-width: 20rem;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
