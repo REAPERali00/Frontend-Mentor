@@ -57,6 +57,14 @@ h2 {
   color: var(--Brown-800);
 }
 
+hr {
+  color: var(--Stone-100);
+  background: var(--Stone-100);
+  margin: 2rem;
+  height: 1px;
+  border: none;
+}
+
 strong {
   font-weight: var(--f-w-large);
 }
@@ -102,15 +110,28 @@ main {
   line-height: 2rem;
 }
 
-.hero-prep li {
+.list-item li {
   padding-left: 1rem;
 }
 
-.hero-prep ul {
+.hero-prep li::marker {
+  color: var(--Rose-800);
+}
+
+.list-item {
   padding-top: 0.5rem;
   padding-left: 1.5rem;
 }
+
 /* ========== Ingredients  ==========*/
+
+#ingredients {
+  width: 100%;
+}
+
+#ingredients li::marker {
+  color: var(--Brown-800);
+}
 
 /* ========== Footer  ==========*/
 .attribution {
