@@ -149,6 +149,31 @@ main {
   margin: 1rem;
 }
 
+/* ========== nutrition  ==========*/
+
+#nutrition {
+  width: 100%;
+}
+
+table {
+  margin: 1rem;
+  vertical-align: center;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+table tr:not(:last-child) td {
+  border-bottom: 1px solid var(--Stone-150);
+}
+
+td {
+  padding: 3px;
+}
+td:last-child {
+  color: var(--Brown-800);
+  font-weight: var(--f-w-large);
+}
+
 /* ========== Footer  ==========*/
 .attribution {
   font-size: 11px;
