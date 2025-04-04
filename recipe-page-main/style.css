@@ -74,12 +74,19 @@ strong {
 }
 
 main {
-  max-width: 70vw;
+  max-width: 50rem;
   background: var(--White);
-  margin: 5rem auto;
+  margin: 5rem 2rem;
   padding: 2.5rem;
   border-radius: 20px;
   align-items: center;
+  @media (max-width: 375px) {
+    margin: 0;
+    border-radius: 0;
+    --f-normal: 0.7rem;
+    --f-med: 1.5rem;
+    --f-large: 2rem;
+  }
 }
 
 .flex {
@@ -131,6 +138,15 @@ main {
 
 #ingredients li::marker {
   color: var(--Brown-800);
+}
+
+/* ========== Instructions  ==========*/
+#instructions li::marker {
+  color: var(--Brown-800);
+}
+
+.space li {
+  margin: 1rem;
 }
 
 /* ========== Footer  ==========*/
