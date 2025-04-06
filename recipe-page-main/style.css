@@ -60,7 +60,8 @@ h2 {
 hr {
   color: var(--Stone-100);
   background: var(--Stone-100);
-  margin: 2rem;
+  margin: 1rem;
+  margin-top: 1rem;
   height: 1px;
   border: none;
 }
@@ -141,12 +142,13 @@ main {
 }
 
 /* ========== Instructions  ==========*/
+
 #instructions li::marker {
   color: var(--Brown-800);
 }
 
 .space li {
-  margin: 1rem;
+  margin: 0.4rem;
 }
 
 /* ========== nutrition  ==========*/
