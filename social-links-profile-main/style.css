@@ -18,9 +18,10 @@
   --Grey-900: hsl(0, 0%, 8%);
 
   /* ========== Fonts  ==========*/
+  --f-small: 0.7rem;
   --f-normal: 1rem;
-  --f-med: 1.8rem;
-  --f-large: 2.5rem;
+  --f-med: 1.4rem;
+  --f-large: 2rem;
   --f-w-normal: 400;
   --f-w-med: 600;
   --f-w-large: 700;
@@ -33,9 +34,79 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: var(--f-w-ormal);
+  background-color: var(--Grey-900);
+  color: var(--White);
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  place-items: center;
 }
 
 /* ========== Social  ==========*/
+#social {
+  width: 20rem;
+  background: var(--Grey-800);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+#social h2 {
+  font-size: var(--f-med);
+}
+
+#social p {
+  font-size: var(--f-small);
+}
+.social-desc > * {
+  margin-bottom: 0.5rem;
+}
+
+.social-location {
+  color: var(--Green);
+  font-size: var(--f-small);
+  font-weight: var(--f-w-large);
+}
+
+.social-img {
+  border-radius: 50%;
+  width: 30%;
+  aspect-ratio: 1;
+}
+
+.social-links li {
+  padding: 0.6rem 6rem;
+  margin-bottom: 1rem;
+  background: var(--Grey-700);
+  font-size: var(--f-small);
+  font-weight: var(--f-w-large);
+  border-radius: 5px;
+}
+
+.social-link,
+.social-link:active {
+  background: var(--Grey-700);
+  color: var(--White);
+  &:hover {
+    background: var(--Green);
+    color: var(--Grey-900);
+  }
+}
 
 /* ========== Footer  ==========*/
 .attribution {
