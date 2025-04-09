@@ -18,7 +18,7 @@
   --Grey-900: hsl(0, 0%, 8%);
 
   /* ========== Fonts  ==========*/
-  --f-small: 0.7rem;
+  --f-small: 0.8rem;
   --f-normal: 1rem;
   --f-med: 1.4rem;
   --f-large: 2rem;
@@ -53,7 +53,7 @@ main {
 
 /* ========== Social  ==========*/
 #social {
-  width: 20rem;
+  width: 22rem;
   background: var(--Grey-800);
   margin: auto;
   display: flex;
@@ -89,23 +89,29 @@ main {
   aspect-ratio: 1;
 }
 
+.social-links {
+  width: 100%;
+}
+
 .social-links li {
-  padding: 0.6rem 6rem;
+  padding: 0.8rem 3rem;
+  width: 100%;
   margin-bottom: 1rem;
   background: var(--Grey-700);
   font-size: var(--f-small);
   font-weight: var(--f-w-large);
-  border-radius: 5px;
-}
-
-.social-link,
-.social-link:active {
-  background: var(--Grey-700);
-  color: var(--White);
+  border-radius: 6px;
+  cursor: pointer;
   &:hover {
     background: var(--Green);
     color: var(--Grey-900);
   }
+}
+
+.social-link,
+.social-link:visited {
+  background: inherit;
+  color: inherit;
 }
 
 /* ========== Footer  ==========*/
