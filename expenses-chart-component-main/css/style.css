@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+/* ========== Setup  ==========*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ========== Colors  ==========*/
+  --Cyan: hsl(186, 34%, 60%);
+  --Soft-red: hsl(10, 79%, 65%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+
+  /* ========== Fonts  ==========*/
+  --f-normal: 1.2rem;
+  --f-med: calc(var(--f-normal)+0.8rem);
+  --f-large: calc(var(--f-normal)+1.8rem);
+  --f-w-normal: 400;
+  --f-w-med: 600;
+  --f-w-large: 700;
+}
+
+/* ========== Base  ==========*/
+
+body {
+  background: var(--Cream);
+  font-family: "DM Sans", sans-serif;
+  font-weight: var(--f-w-normal);
+  font-size: var(--f-normal);
+  color: var(--Stone-600);
+}
+
+/* ========== footer  ==========*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
