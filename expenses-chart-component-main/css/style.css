@@ -17,8 +17,7 @@
   --Very-pale-orange: hsl(33, 100%, 98%);
 
   /* ========== Fonts  ==========*/
-  --f-small: 0.8rem;
-  --f-normal: 1rem;
+  --f-normal: 0.8rem;
   --f-med: calc(var(--f-normal) + 0.5rem);
   --f-large: calc(var(--f-normal) + 0.8rem);
   --f-w-normal: 400;
@@ -78,8 +77,8 @@ hr {
 
 .exp-head {
   margin-right: 10rem;
-  & p {
-    font-size: var(--f-small);
+  & h1 {
+    font-size: var(--f-large);
   }
 }
 
@@ -112,6 +111,32 @@ hr {
   display: inline-block;
   width: 100%;
   font-weight: var(--f-w-large);
+}
+
+.exp-chart {
+  align-items: flex-end;
+  height: 15rem;
+}
+
+.item {
+  text-align: center;
+  width: 15%;
+  position: relative;
+  color: var(--Medium-brown);
+}
+
+.item::before {
+  content: " ";
+  position: absolute;
+  background: var(--Soft-red);
+  left: 0;
+  bottom: 20px;
+  height: calc(1px * var(--height, 50));
+  width: 100%;
+  border-radius: 5px;
+}
+.item-highest::before {
+  background-color: var(--Cyan);
 }
 
 /* ========== footer  ==========*/
