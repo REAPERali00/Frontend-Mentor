@@ -22,7 +22,6 @@
   --f-med: calc(var(--f-normal) + 0.5rem);
   --f-large: calc(var(--f-normal) + 0.8rem);
   --f-w-normal: 400;
-  --f-w-med: 600;
   --f-w-large: 700;
 }
 
@@ -74,7 +73,7 @@ hr {
   justify-content: space-between;
   align-items: center;
   border-radius: 15px;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .exp-head {
@@ -87,12 +86,32 @@ hr {
 /* ========== Expense chart  ==========*/
 .exp-weekly {
   background: var(--Very-pale-orange);
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 15px;
   color: var(--Dark-brown);
   & h2 {
     font-size: var(--f-med);
   }
+}
+
+.exp-total {
+  justify-content: space-between;
+  align-items: center;
+  & h1 {
+    font-size: 2rem;
+    font-weight: var(--f-w-large);
+    margin-right: 5rem;
+  }
+  & p {
+    color: var(--Medium-brown);
+  }
+}
+
+.exp-change {
+  text-align: right;
+  display: inline-block;
+  width: 100%;
+  font-weight: var(--f-w-large);
 }
 
 /* ========== footer  ==========*/
