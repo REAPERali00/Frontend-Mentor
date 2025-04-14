@@ -19,8 +19,8 @@
   /* ========== Fonts  ==========*/
   --f-small: 0.8rem;
   --f-normal: 1rem;
-  --f-med: calc(var(--f-normal)+0.8rem);
-  --f-large: calc(var(--f-normal)+1.8rem);
+  --f-med: calc(var(--f-normal) + 0.5rem);
+  --f-large: calc(var(--f-normal) + 0.8rem);
   --f-w-normal: 400;
   --f-w-med: 600;
   --f-w-large: 700;
@@ -52,6 +52,15 @@ main {
   height: 100vh;
 }
 
+hr {
+  height: 1px;
+  border: none;
+
+  margin: 1rem;
+  background: var(--Medium-brown);
+  opacity: 0.4;
+}
+
 /* ========== Exp balance  ==========*/
 #expense {
   max-width: 40rem;
@@ -62,10 +71,10 @@ main {
 .exp-balance {
   background: var(--Soft-red);
   color: var(--Very-pale-orange);
-  padding: 1rem;
   justify-content: space-between;
   align-items: center;
   border-radius: 15px;
+  padding: 1rem;
 }
 
 .exp-head {
@@ -75,9 +84,15 @@ main {
   }
 }
 
+/* ========== Expense chart  ==========*/
 .exp-weekly {
   background: var(--Very-pale-orange);
-  grid-row: 2/5;
+  padding: 1rem;
+  border-radius: 15px;
+  color: var(--Dark-brown);
+  & h2 {
+    font-size: var(--f-med);
+  }
 }
 
 /* ========== footer  ==========*/
