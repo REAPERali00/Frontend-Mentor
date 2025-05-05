@@ -1,10 +1,20 @@
 function Form() {
   return (
     <>
-      Your Journey to Coding Conf 2025 Starts Here! Secure your spot at next
-      year's biggest coding conference. Upload Avatar Drag and drop or click to
-      upload Upload your photo (JPG or PNG, max size: 500KB). Full Name Email
-      Address example@email.com GitHub Username @yourusername Generate My Ticket
+      <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+      <p>Secure your spot at next year's biggest coding conference.</p>
+      <form>
+        {/* <HandleUpload /> */}
+        <label>Full Name </label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" value="example@email.com" />
+        <label>GitHub Username</label>
+        <input type="text" value="@yourusername" />
+        <input type="submit" value="Generate My Ticket" />
+      </form>
+      Upload Avatar Drag and drop or click to upload Upload your photo (JPG or
+      PNG, max size: 500KB).
     </>
   );
 }
