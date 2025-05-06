@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   /* ============ Colors ============*/
   --Neutral-0: hsl(0, 0%, 100%);
@@ -18,8 +19,8 @@
 
   /* ============ Fonts ============*/
   --f-normal: 1rem;
-  --f-med: calc(var(--f-normal)+0.4rem);
-  --f-large: calc(var(--f-normal)+2rem);
+  --f-med: calc(var(--f-normal) + 0.4rem);
+  --f-large: calc(var(--f-normal) + 2rem);
   --fw-small: 400;
   --fw-med: 500;
   --fw-normal: 700;
@@ -58,4 +59,27 @@ body {
   font-weight: var(--fw-normal);
   color: var(--Neutral-0);
   height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 2rem;
 }
