@@ -6,7 +6,7 @@ export default function Form() {
         Your Journey to Coding Conf 2025 Starts Here!
       </h1>
       <p>Secure your spot at next year's biggest coding conference.</p>
-      <form className="flex-col">
+      <form className="form-form flex-col">
         <div className="form-section">
           <label>Upload Avatar</label>
           <div className="upload-box">
@@ -17,12 +17,16 @@ export default function Form() {
         </div>
         {/* <HandleUpload /> */}
         <label>Full Name </label>
-        <input type="text" />
+        <input className="form-input" type="text" />
         <label>Email Address</label>
-        <input type="email" value="example@email.com" />
+        <input className="form-input" type="email" value="example@email.com" />
         <label>GitHub Username</label>
-        <input type="text" value="@yourusername" />
-        <input type="submit" value="Generate My Ticket" />
+        <input className="form-input" type="text" value="@yourusername" />
+        <input
+          className="form-submit"
+          type="submit"
+          value="Generate My Ticket"
+        />
       </form>
     </section>
   );
