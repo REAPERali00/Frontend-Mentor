@@ -18,7 +18,7 @@
   /* --Gradient-(text): hsl(7, 86%, 67%) to hsl(0, 0%, 100%); */
 
   /* ============ Fonts ============*/
-  --f-normal: 1rem;
+  --f-normal: 1.25rem;
   --f-med: calc(var(--f-normal) + 0.4rem);
   --f-large: calc(var(--f-normal) + 2rem);
   --fw-small: 400;
@@ -57,6 +57,7 @@ body {
   font-family: "Inconsolata", monospace;
   font-optical-sizing: auto;
   font-weight: var(--fw-normal);
+  font-size: var(--f-normal);
   color: var(--Neutral-0);
   height: 100vh;
 }
@@ -82,4 +83,8 @@ body {
 
 .logo {
   margin: 2rem;
+}
+
+.App {
+  height: 100vh;
 }

@@ -5,7 +5,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="container">
+    <div className="App container">
       <div className="logo flex-center">
         <img src={logo} alt="logo" />
       </div>

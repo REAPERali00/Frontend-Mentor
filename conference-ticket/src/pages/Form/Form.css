@@ -1,9 +1,15 @@
 .form {
   max-width: 60%;
   margin: auto;
+  gap: 2rem;
 }
+
 .form-heading {
   font-size: var(--f-large);
-  margin: 2rem;
+  margin-top: 1rem;
   text-align: center;
+}
+
+.form p {
+  color: var(--Neutral-300);
 }

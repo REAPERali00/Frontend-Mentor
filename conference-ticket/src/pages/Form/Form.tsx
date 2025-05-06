@@ -7,11 +7,15 @@ export default function Form() {
       </h1>
       <p>Secure your spot at next year's biggest coding conference.</p>
       <form className="flex-col">
+        <div className="form-section">
+          <label>Upload Avatar</label>
+          <div className="upload-box">
+            <input type="file" id="avatar" />
+            <label htmlFor="avatar">Drag and drop or click to upload </label>
+            <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
+          </div>
+        </div>
         {/* <HandleUpload /> */}
-        <p>
-          Upload Avatar Drag and drop or click to upload Upload your photo (JPG
-          or PNG, max size: 500KB).
-        </p>
         <label>Full Name </label>
         <input type="text" />
         <label>Email Address</label>
