@@ -58,6 +58,10 @@
 .form-tip {
   font-size: small;
   color: var(--Neutral-500);
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0rem;
+  margin-bottom: 1rem;
 }
 
 #avatar {

@@ -1,5 +1,6 @@
 import "./Form.css";
-import icon from "../../assets/images/icon-upload.svg";
+import upload_icon from "../../assets/images/icon-upload.svg";
+import info_icon from "../../assets/images/icon-info.svg";
 export default function Form() {
   return (
     <section className="form flex-center flex-col">
@@ -11,12 +12,13 @@ export default function Form() {
         <div className="form-section">
           <label>Upload Avatar</label>
           <div className="upload-box">
-            <img className="upload-box-img" src={icon} alt="icon" />
+            <img className="upload-box-img" src={upload_icon} alt="icon" />
             <br />
             <input type="file" id="avatar" />
             <label htmlFor="avatar">Drag and drop or click to upload </label>
           </div>
-          <small className="form-tip">
+          <small className="form-tip flex">
+            <img className="" src={info_icon} alt="icon" />
             Upload your photo (JPG or PNG, max size: 500KB).
           </small>
         </div>
