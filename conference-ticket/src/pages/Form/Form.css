@@ -36,6 +36,10 @@
   border-radius: 10px;
   padding: 1rem;
   font-weight: var(--fw-large);
+  &:hover {
+    cursor: pointer;
+    background-color: var(--Orange-500);
+  }
 }
 
 .upload-box {
@@ -46,6 +50,13 @@
   filter: opacity(60%);
   margin: 1rem 0rem;
   text-align: center;
+  color: var(--Neutral-0);
+}
+
+.upload-box:hover,
+.form-input:hover {
+  cursor: pointer;
+  background-color: var(--Neutral-500);
 }
 
 .upload-box-img {
