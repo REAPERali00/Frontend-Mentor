@@ -12,3 +12,9 @@
   background-clip: text;
   color: transparent;
 }
+
+.ticket-main {
+  background: no-repeat url("../../assets/images/pattern-ticket.svg");
+  background-position: cover;
+  margin: 1rem;
+}
