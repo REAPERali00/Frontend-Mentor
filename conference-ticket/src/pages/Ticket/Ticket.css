@@ -1,3 +1,14 @@
 .ticket {
   /* margin: 10rem; */
+  gap: 2rem;
+}
+
+.ticket-head {
+  text-align: center;
+}
+
+.highlight {
+  background: var(--Gradient-text);
+  background-clip: text;
+  color: transparent;
 }
