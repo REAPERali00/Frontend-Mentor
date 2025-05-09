@@ -1,10 +1,10 @@
 .ticket {
   /* margin: 10rem; */
   gap: 2rem;
-}
-
-.ticket-head {
   text-align: center;
+}
+.orange-txt {
+  color: var(--Orange-500);
 }
 
 .highlight {
@@ -14,7 +14,16 @@
 }
 
 .ticket-main {
-  background: no-repeat url("../../assets/images/pattern-ticket.svg");
-  background-position: cover;
-  margin: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  width: 100%:
+}
+
+.ticket-bg {
+  position: absolute;
+  /* top: 50%; */
+  left: -50%;
 }
