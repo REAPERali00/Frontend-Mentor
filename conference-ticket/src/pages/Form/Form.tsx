@@ -1,4 +1,6 @@
 import "./Form.css";
+import upload_icon from "../../assets/images/icon-upload.svg";
+import info_icon from "../../assets/images/icon-info.svg";
 export default function Form() {
   return (
     <section className="form flex-center flex-col">
@@ -6,23 +8,32 @@ export default function Form() {
         Your Journey to Coding Conf 2025 Starts Here!
       </h1>
       <p>Secure your spot at next year's biggest coding conference.</p>
-      <form className="flex-col">
+      <form className="form-form flex-col">
         <div className="form-section">
           <label>Upload Avatar</label>
           <div className="upload-box">
+            <img className="upload-box-img" src={upload_icon} alt="icon" />
+            <br />
             <input type="file" id="avatar" />
             <label htmlFor="avatar">Drag and drop or click to upload </label>
-            <small>Upload your photo (JPG or PNG, max size: 500KB).</small>
           </div>
+          <small className="form-tip flex">
+            <img className="" src={info_icon} alt="icon" />
+            Upload your photo (JPG or PNG, max size: 500KB).
+          </small>
         </div>
         {/* <HandleUpload /> */}
         <label>Full Name </label>
-        <input type="text" />
+        <input className="form-input" type="text" />
         <label>Email Address</label>
-        <input type="email" value="example@email.com" />
+        <input className="form-input" type="email" value="example@email.com" />
         <label>GitHub Username</label>
-        <input type="text" value="@yourusername" />
-        <input type="submit" value="Generate My Ticket" />
+        <input className="form-input" type="text" value="@yourusername" />
+        <input
+          className="form-submit"
+          type="submit"
+          value="Generate My Ticket"
+        />
       </form>
     </section>
   );

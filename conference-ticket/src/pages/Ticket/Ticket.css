@@ -1,0 +1,56 @@
+.ticket {
+  gap: 2rem;
+  text-align: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.orange-txt {
+  color: var(--Orange-500);
+}
+
+.highlight {
+  background: var(--Gradient-text);
+  background-clip: text;
+  color: transparent;
+}
+
+.ticket-main {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  width: 30rem;
+}
+
+.ticket-bg {
+  position: absolute;
+  width: 105%;
+}
+
+.ticket-info {
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.ticket-left {
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 2rem;
+}
+
+.usr-info {
+  margin-top: 4rem;
+}
+
+.usr-info img {
+  width: 15%;
+  border-radius: 10px;
+}
+
+.ticket-code {
+  transform: rotate(90deg);
+  color: var(--Neutral-500);
+}
