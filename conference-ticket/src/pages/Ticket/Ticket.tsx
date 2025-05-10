@@ -2,6 +2,7 @@ import { useState } from "react";
 import ticket_svg from "../../assets/images/pattern-ticket.svg";
 import logo from "../../assets/images/logo-full.svg";
 import avatar from "../../assets/images/image-avatar.jpg";
+import git_svg from "../../assets/images/icon-github.svg";
 import "./Ticket.css";
 
 function Ticket() {
@@ -31,7 +32,10 @@ function Ticket() {
             <img src={avatar} alt="avatar" />
             <div>
               <p>{name}</p>
-              <p>{gitId}</p>
+              <p>
+                <img src={git_svg} />
+                {gitId}
+              </p>
             </div>
           </div>
         </div>
