@@ -11,8 +11,8 @@ function Ticket() {
   return (
     <div className="ticket flex-col flex-center">
       <h1 className="ticket-head">
-        Congrats, <span className="highlight">{name}</span>!<br /> Your ticket
-        is ready.
+        Congrats, <span className="highlight">{name}</span>! Your ticket is
+        ready.
       </h1>
       <p>
         We've emailed your ticket to <br />
@@ -21,16 +21,18 @@ function Ticket() {
       </p>
       <div className="ticket-main">
         <img src={ticket_svg} alt="ticket background" className="ticket-bg" />
-        <div className="ticket-left">
+        <div className="ticket-left flex-col">
           <div className="ticket-event">
             <img src={logo} alt="logo" />
             <p>Jan 31, 2025 / Austin, TX</p>
           </div>
 
-          <div className="usr-info">
+          <div className="usr-info flex">
             <img src={avatar} alt="avatar" />
-            <p>{name}</p>
-            <p>{gitId}</p>
+            <div>
+              <p>{name}</p>
+              <p>{gitId}</p>
+            </div>
           </div>
         </div>
         <div className="ticket-right">
