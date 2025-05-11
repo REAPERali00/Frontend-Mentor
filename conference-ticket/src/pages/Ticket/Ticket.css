@@ -5,6 +5,11 @@
   margin: 0 auto;
 }
 
+.ticket-main p {
+  color: var(--Neutral-500);
+  font-size: 1rem;
+}
+
 .orange-txt {
   color: var(--Orange-500);
 }
@@ -26,7 +31,7 @@
 
 .ticket-bg {
   position: absolute;
-  width: 105%;
+  width: 110%;
 }
 
 .ticket-info {
@@ -36,21 +41,39 @@
 
 .ticket-left {
   gap: 1rem;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding-left: 2rem;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  padding-left: 1rem;
+  justify-items: start;
+}
+
+.ticket-event {
+  padding-left: 3rem;
 }
 
 .usr-info {
   margin-top: 4rem;
+  gap: 1rem;
 }
 
 .usr-info img {
   width: 15%;
+  object-fit: cover;
   border-radius: 10px;
+}
+
+.usr-id {
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.usr-id img {
+  width: 10%;
 }
 
 .ticket-code {
   transform: rotate(90deg);
   color: var(--Neutral-500);
+  padding-bottom: 4rem;
 }

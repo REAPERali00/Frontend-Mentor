@@ -2,6 +2,7 @@ import { useState } from "react";
 import ticket_svg from "../../assets/images/pattern-ticket.svg";
 import logo from "../../assets/images/logo-full.svg";
 import avatar from "../../assets/images/image-avatar.jpg";
+import git_svg from "../../assets/images/icon-github.svg";
 import "./Ticket.css";
 
 function Ticket() {
@@ -21,17 +22,20 @@ function Ticket() {
       </p>
       <div className="ticket-main">
         <img src={ticket_svg} alt="ticket background" className="ticket-bg" />
-        <div className="ticket-left flex-col">
+        <div className="ticket-left">
+          <img src={logo} alt="logo" />
           <div className="ticket-event">
-            <img src={logo} alt="logo" />
             <p>Jan 31, 2025 / Austin, TX</p>
           </div>
 
           <div className="usr-info flex">
             <img src={avatar} alt="avatar" />
-            <div>
-              <p>{name}</p>
-              <p>{gitId}</p>
+            <div className="usr-name">
+              <h2>{name}</h2>
+              <div className="usr-id flex">
+                <img src={git_svg} />
+                <p>{gitId}</p>
+              </div>
             </div>
           </div>
         </div>
