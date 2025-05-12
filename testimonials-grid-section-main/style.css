@@ -13,7 +13,7 @@
   --Grey-200: hsl(0, 0%, 81%);
   --Grey-400: hsl(224, 10%, 45%);
   --Grey-500: hsl(217, 19%, 35%);
-  --Dark-blue: -hsl(219, 29%, 14%);
+  --Dark-blue: hsl(219, 29%, 14%);
   --Black: hsl(0, 0%, 7%);
   --White: hsl(0, 0%, 100%);
 
@@ -24,8 +24,73 @@
 }
 
 body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: var(--f-normal);
+  font-weight: var(--fw-normal);
+  background-color: var(--Grey-100);
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.reviews {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem;
+  grid-template-areas:
+    "rev1 rev1 rev2 rev5"
+    "rev3 rev4 rev4 rev5";
+}
+.reviews > div {
+  padding: 2rem;
+  border-radius: 10px;
+}
+.rev-1 {
+  grid-area: rev1;
+  background: url("./images/bg-pattern-quotation.svg") no-repeat top right 20%;
+  background-color: var(--Purple-500);
+  color: var(--White);
+}
+.rev-2 {
+  grid-area: rev2;
+  background-color: var(--Grey-500);
+  color: var(--White);
+}
+.rev-3 {
+  grid-area: rev3;
+  background-color: var(--White);
+}
+.rev-4 {
+  grid-area: rev4;
+  background-color: var(--Dark-blue);
+  color: var(--White);
+}
+.rev-5 {
+  grid-area: rev5;
+  background-color: var(--White);
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.author img {
+  border-radius: 50px;
+  width: 2rem;
+  border: 1px solid;
+  color: var(--Purple-300);
+}
+
+.p-grey {
+  color: var(--Grey-200);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
