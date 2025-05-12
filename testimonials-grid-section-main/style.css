@@ -18,7 +18,7 @@
   --White: hsl(0, 0%, 100%);
 
   --f-normal: 0.8rem;
-  --f-large: 1.4rem;
+  --f-large: 1.2rem;
   --fw-normal: 500;
   --fw-large: 600;
 }
@@ -31,10 +31,16 @@ body {
 }
 
 main {
+  margin: 3rem 0rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+}
+
+h3 {
+  font-size: var(--f-large);
+  font-weight: var(--fw-large);
+  margin-bottom: 1rem;
 }
 
 .reviews {
@@ -47,6 +53,7 @@ main {
     "rev3 rev4 rev4 rev5";
 }
 .reviews > div {
+  box-shadow: 30px 50px 30px var(--Grey-200);
   padding: 2rem;
   border-radius: 10px;
 }
@@ -97,4 +104,21 @@ main {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+  .rev-1,
+  .rev-2,
+  .rev-3,
+  .rev-4,
+  .rev-5 {
+    grid-area: auto;
+  }
+  .reviews {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: none;
+  }
+  .reviews > div {
+    width: 100%;
+  }
 }
