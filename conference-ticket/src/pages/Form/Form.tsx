@@ -1,7 +1,25 @@
 import "./Form.css";
+import { useState } from "react";
 import upload_icon from "../../assets/images/icon-upload.svg";
 import info_icon from "../../assets/images/icon-info.svg";
+
+interface Form {
+  name: string;
+  email: string;
+  userId: string | number;
+}
+
 export default function Form() {
+  const [inputs, setInputs] = useState<Form>({
+    name: "",
+    email: "",
+    userId: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
+  };
+
   return (
     <section className="form flex-center flex-col">
       <h1 className="form-heading">
@@ -24,15 +42,37 @@ export default function Form() {
         </div>
         {/* <HandleUpload /> */}
         <label>Full Name </label>
-        <input className="form-input" type="text" />
+        <input
+          name="name"
+          className="form-input"
+          type="text"
+          value={inputs.name}
+          placeholder="Full name"
+          onChange={handleChange}
+        />
         <label>Email Address</label>
-        <input className="form-input" type="email" value="example@email.com" />
+        <input
+          name="email"
+          className="form-input"
+          type="email"
+          value={inputs.email}
+          placeholder="example@email.com"
+          onChange={handleChange}
+        />
         <label>GitHub Username</label>
-        <input className="form-input" type="text" value="@yourusername" />
+        <input
+          name="userId"
+          className="form-input"
+          type="text"
+          value={inputs.userId}
+          placeholder="@yourusername"
+          onChange={handleChange}
+        />
         <input
           className="form-submit"
           type="submit"
           value="Generate My Ticket"
+          onChange={handleChange}
         />
       </form>
     </section>

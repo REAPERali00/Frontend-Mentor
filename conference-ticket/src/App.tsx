@@ -10,8 +10,8 @@ function App() {
       <div className="logo flex-center">
         <img src={logo} alt="logo" />
       </div>
-      {/* <Form /> */}
-      <Ticket />
+      <Form />
+      {/* <Ticket /> */}
     </div>
   );
 }
