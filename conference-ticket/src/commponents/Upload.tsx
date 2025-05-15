@@ -5,12 +5,15 @@ import info_icon from "../assets/images/icon-info.svg";
 interface UploadProps {
   avatar: File | null;
   setAvatar: (avatar: File | null) => void;
+  error?: string;
 }
 
-export default function Upload({ avatar, setAvatar }: UploadProps) {
+export default function Upload({ avatar, setAvatar, error }: UploadProps) {
   const [dragActive, setDragActive] = useState(false);
   const inputRef = useRef<HTMLInputElement | null>(null);
   const [preview, setPreview] = useState<string | null>(null);
+  const MAX_FILE_SIZE = 500 * 1024;
+  const [sizeError, setSizeError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!avatar) {
@@ -44,6 +47,13 @@ export default function Upload({ avatar, setAvatar }: UploadProps) {
   };
   const handleFiles = (files: FileList) => {
     const file = files[0];
+    if (file.size > MAX_FILE_SIZE) {
+      setSizeError(
+        `File size is ${(file.size / (1024 * 1024)).toFixed(2)}MB. Pleas upload a photo under 500kb.`,
+      );
+      return;
+    }
+    setSizeError(null);
     setAvatar(file);
   };
 
@@ -107,10 +117,17 @@ export default function Upload({ avatar, setAvatar }: UploadProps) {
           <label htmlFor="avatar">Drag and drop or click to upload </label>
         </div>
       )}
-      <small className="form-tip flex">
-        <img className="" src={info_icon} alt="icon" />
-        Upload your photo (JPG or PNG, max size: 500KB).
-      </small>
+      {error || sizeError ? (
+        <small className="form-error form-tip flex">
+          <img className="" src={info_icon} alt="icon" />
+          {error || sizeError}
+        </small>
+      ) : (
+        <small className="form-tip flex">
+          <img className="" src={info_icon} alt="icon" />
+          Upload your photo (JPG or PNG, max size: 500KB).
+        </small>
+      )}
     </div>
   );
 }
