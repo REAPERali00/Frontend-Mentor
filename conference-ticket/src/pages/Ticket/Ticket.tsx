@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ticket_svg from "../../assets/images/pattern-ticket.svg";
 import logo from "../../assets/images/logo-full.svg";
-import avatar from "../../assets/images/image-avatar.jpg";
+import avatar_def from "../../assets/images/icon-upload.svg";
 import git_svg from "../../assets/images/icon-github.svg";
 import "./Ticket.css";
 
-function Ticket() {
-  const [name, setName] = useState("Jonatan Kristof");
-  const [gitId, setGitId] = useState("@jonatankristof0101");
-  const [email, setEmail] = useState("jonatan@email.com");
+interface TicketProps {
+  name: string;
+  userId: string;
+  email: string;
+  avatar: File | null;
+}
+
+function Ticket({ name, userId, email, avatar }: TicketProps) {
+  const [preview, setPreview] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!avatar) {
+      setPreview(null);
+    } else {
+      const objectUrl = URL.createObjectURL(avatar);
+      setPreview(objectUrl);
+      return () => URL.revokeObjectURL(objectUrl);
+    }
+  }, [avatar]);
   return (
     <div className="ticket flex-col flex-center">
       <h1 className="ticket-head">
@@ -29,12 +44,12 @@ function Ticket() {
           </div>
 
           <div className="usr-info flex">
-            <img src={avatar} alt="avatar" />
+            <img src={preview || avatar_def} alt="avatar" />
             <div className="usr-name">
               <h2>{name}</h2>
               <div className="usr-id flex">
                 <img src={git_svg} />
-                <p>{gitId}</p>
+                <p>{userId}</p>
               </div>
             </div>
           </div>

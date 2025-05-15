@@ -84,6 +84,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+.gap-1 {
+  gap: 1rem;
+}
 
 .logo {
   margin: 2rem;

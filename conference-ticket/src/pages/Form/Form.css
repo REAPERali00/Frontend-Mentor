@@ -44,7 +44,7 @@
 
 .upload-box {
   padding: 2rem 3rem;
-  border: 2px dashed;
+  border: 2px dashed var(--Neutral-0);
   border-radius: 15px;
   background-color: var(--Neutral-900);
   filter: opacity(60%);
@@ -57,6 +57,15 @@
 .form-input:hover {
   cursor: pointer;
   background-color: var(--Neutral-500);
+  color: var(--Neutral-900);
+}
+
+.no-bg-hover:hover {
+  background-color: var(--Neutral-900);
+}
+.drag-active {
+  content: "Drag here";
+  background-color: var(--Neutral-500);
 }
 
 .upload-box-img {
@@ -64,6 +73,23 @@
   border-radius: 10px;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
+  width: 20%;
+}
+
+.upload-btn {
+  background-color: var(--Neutral-700);
+  color: var(--Neutral-0);
+  padding: 5px;
+  font-size: small;
+  font-weight: var(--fw-small);
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    background-color: var(--Neutral-300);
+    color: var(--Neutral-900);
+    cursor: pointer;
+  }
 }
 
 .form-tip {
