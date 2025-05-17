@@ -24,19 +24,17 @@ function App() {
       <div className="logo flex-center">
         <img src={logo} alt="logo" />
       </div>
-      <div>
-        {!person && (
-          <Form onSubmit={setPerson} avatar={avatar} setAvatar={setAvatar} />
-        )}
-        {person && (
-          <Ticket
-            name={person.name}
-            userId={person.userId}
-            email={person.email}
-            avatar={avatar}
-          />
-        )}
-      </div>
+      {!person && (
+        <Form onSubmit={setPerson} avatar={avatar} setAvatar={setAvatar} />
+      )}
+      {person && (
+        <Ticket
+          name={person.name}
+          userId={person.userId}
+          email={person.email}
+          avatar={avatar}
+        />
+      )}
     </div>
   );
 }

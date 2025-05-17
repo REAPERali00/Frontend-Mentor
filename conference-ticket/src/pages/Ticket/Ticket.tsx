@@ -25,7 +25,7 @@ function Ticket({ name, userId, email, avatar }: TicketProps) {
     }
   }, [avatar]);
   return (
-    <div className="ticket flex-col flex-center">
+    <section className="ticket flex-col flex-center">
       <h1 className="ticket-head">
         Congrats, <span className="highlight">{name}</span>! Your ticket is
         ready.
@@ -58,7 +58,7 @@ function Ticket({ name, userId, email, avatar }: TicketProps) {
           <div className="ticket-code">#010609</div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

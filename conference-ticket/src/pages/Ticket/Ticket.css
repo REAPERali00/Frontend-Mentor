@@ -3,11 +3,16 @@
   text-align: center;
   max-width: 50%;
   margin: 0 auto;
+  min-height: 70vh;
+}
+
+.ticket-head {
+  font-size: var(--f-large);
 }
 
 .ticket-main p {
   color: var(--Neutral-500);
-  font-size: 1rem;
+  font-size: var(--f-normal);
 }
 
 .orange-txt {
@@ -76,4 +81,43 @@
   transform: rotate(90deg);
   color: var(--Neutral-500);
   padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 750px) {
+  .ticket {
+    max-width: 90%;
+  }
+  .ticket-bg {
+    width: 26rem;
+  }
+  .ticket-main {
+    width: 25rem;
+  }
+  .ticket-left {
+    gap: 0;
+  }
+  .ticket-code {
+    padding-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .ticket {
+    max-width: 100%;
+  }
+
+  .ticket-head {
+    font-size: var(--f-med);
+  }
+
+  .ticket-bg {
+    width: 20rem;
+  }
+  .ticket-main {
+    width: 19rem;
+    margin-left: 0rem;
+  }
+  .usr-info {
+    margin-top: 10px;
+  }
 }
