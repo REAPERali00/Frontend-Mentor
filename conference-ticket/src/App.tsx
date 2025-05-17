@@ -4,7 +4,7 @@ import Ticket from "./pages/Ticket/Ticket.tsx";
 import logo from "./assets/images/logo-full.svg";
 import "./App.css";
 
-interface Person {
+export interface Person {
   name: string;
   userId: string;
   email: string;

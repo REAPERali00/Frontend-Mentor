@@ -2,12 +2,9 @@ import "./Form.css";
 import { useState } from "react";
 import info_icon from "../../assets/images/icon-info.svg";
 import Upload from "../../commponents/Upload.tsx";
+import type { Person } from "../../App";
 
-interface Form {
-  name: string;
-  email: string;
-  userId: string | number;
-}
+type Form = Person;
 
 interface FormProps {
   onSubmit: (person: Form | null) => void;
