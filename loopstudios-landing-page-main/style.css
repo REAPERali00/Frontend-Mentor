@@ -25,8 +25,6 @@ body {
   /* font-family: "Alata", sans-serif; */
   font-weight: var(--fw-normal);
   font-size: var(--f-normal);
-  background: url("./images/mobile/image-hero.jpg");
-  color: var(--White);
 }
 a {
   text-decoration: none;
@@ -38,8 +36,10 @@ a {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 2rem 1.3rem;
-  position: relative;
+  padding: 4rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 5;
 }
 
@@ -66,6 +66,8 @@ a {
   align-items: center;
   transition: right 0.3s ease-in-out;
   z-index: 10;
+  padding: 2rem 2rem;
+  gap: 6rem;
 }
 
 .nav-menu.show {
@@ -76,20 +78,35 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding-top: 2rem;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 .nav-list {
   list-style: none;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
 }
 
-.nav-item,
-.nav-item:visited {
+.nav-item a,
+.nav-item a:visited {
+  color: var(--White);
+  font-size: var(--f-large);
+  text-transform: uppercase;
+}
+
+/* <=================== Hero ===================> */
+
+.hero {
+  min-height: 100vh;
+  background: url("./images/mobile/image-hero.jpg");
   color: var(--White);
 }
 
-/* <===================  ===================> */
 /* <===================  ===================> */
 /* <===================  ===================> */
