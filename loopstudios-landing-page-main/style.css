@@ -27,8 +27,67 @@ body {
   background: url("./images/mobile/image-hero.jpg");
   color: var(--White);
 }
+a {
+  text-decoration: none;
+}
 
 /* <=================== Nav ===================> */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2rem 1.3rem;
+  position: relative;
+  z-index: 5;
+}
+
+.menu-toggle,
+.menu-close {
+  width: 30px;
+  aspect-ratio: 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Black);
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.nav-menu.show {
+  right: 0;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  max-width: 50%;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item,
+.nav-item:visited {
+  color: var(--White);
+}
 
 /* <===================  ===================> */
 /* <===================  ===================> */
