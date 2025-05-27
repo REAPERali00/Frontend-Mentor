@@ -21,7 +21,7 @@
 
 /* <=================== Elements ===================> */
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Alata", sans-serif; /* Headings use Alata */
   font-weight: var(--fw-normal);
   font-size: var(--f-normal);
 }
@@ -33,13 +33,19 @@ a {
 h1,
 h2,
 h3 {
-  font-family: "Alata", sans-serif; /* Headings use Alata */
+  font-family: "Josefin Sans", sans-serif;
   /* font-weight: var(--fw-large); */
   text-transform: uppercase;
 }
 
 h1 {
   font-size: var(--f-large);
+  font-weight: var(--fw-normal);
+}
+
+p {
+  font-weight: var(--fw-large);
+  opacity: 0.5;
 }
 
 /* <=================== Nav ===================> */
@@ -128,5 +134,22 @@ h1 {
   margin: 0 2rem;
 }
 
+/* <=================== about ===================> */
+.about {
+  margin: 5rem 2rem;
+  text-align: center;
+}
+
+.about img {
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+
+.about-content h1 {
+  margin-bottom: 1rem;
+}
+
+/* <===================  ===================> */
 /* <===================  ===================> */
 /* <===================  ===================> */
