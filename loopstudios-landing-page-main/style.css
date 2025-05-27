@@ -22,4 +22,6 @@ body {
   /* font-family: "Alata", sans-serif; */
   font-weight: var(--fw-normal);
   font-size: var(--f-normal);
+  background: url("./images/mobile/image-hero.jpg");
+  color: var(--White);
 }
