@@ -34,7 +34,7 @@ h1,
 h2,
 h3 {
   font-family: "Josefin Sans", sans-serif;
-  /* font-weight: var(--fw-large); */
+  font-weight: var(--fw-large);
   text-transform: uppercase;
 }
 
@@ -55,7 +55,7 @@ p {
   align-items: center;
   margin: 0 auto;
   padding: 4rem 2rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 5;
@@ -155,14 +155,49 @@ p {
   margin: 2rem;
 }
 
+.creations > h1 {
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+}
+
 .card {
-  padding: 2rem 5rem;
+  padding: 5rem 5rem;
   color: var(--White);
+  position: relative;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.card h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  max-width: 50%;
+  font-size: calc(var(--f-large) - 1rem);
+}
+
+.card-btn {
+  border: 2px solid var(--Black);
+  padding: 0.5rem 2rem;
+  max-width: 30%;
+  text-align: center;
+  justify-self: center;
+  order: 1;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .earth {
-  background: url("./images/mobile/image-deep-earth.jpg") no-repeat center
-    center;
+  background: url("./images/mobile/image-deep-earth.jpg") no-repeat top
+    right/cover;
 }
 
 .arcade {
