@@ -34,7 +34,7 @@ h1,
 h2,
 h3 {
   font-family: "Josefin Sans", sans-serif;
-  /* font-weight: var(--fw-large); */
+  font-weight: var(--fw-large);
   text-transform: uppercase;
 }
 
@@ -47,6 +47,10 @@ p {
   font-weight: var(--fw-large);
   opacity: 0.5;
 }
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
 /* <=================== Nav ===================> */
 .navbar {
@@ -55,7 +59,7 @@ p {
   align-items: center;
   margin: 0 auto;
   padding: 4rem 2rem;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   z-index: 5;
@@ -111,6 +115,10 @@ p {
   width: 100%;
 }
 
+.desktop-nav {
+  display: none;
+}
+
 .nav-item a,
 .nav-item a:visited {
   color: var(--White);
@@ -121,13 +129,31 @@ p {
 /* <=================== Hero ===================> */
 
 .hero {
+  position: relative;
   min-height: 100vh;
-  background: url("./images/mobile/image-hero.jpg") no-repeat center center;
   color: var(--White);
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("./images/mobile/image-hero.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.hero-conent {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+}
+
 .hero-box {
   border: 3px solid var(--White);
   padding: 5rem 3rem;
@@ -152,49 +178,277 @@ p {
 
 /* <===================  creations ===================> */
 .creations {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "content"
+    "btn";
+
+  gap: 1rem;
   margin: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.creations > h1 {
+  text-align: center;
+  grid-area: header;
+}
+
+.cards {
+  grid-area: content;
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
 }
 
 .card {
-  padding: 2rem 5rem;
+  padding: 5rem 5rem;
   color: var(--White);
+  position: relative;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.card h1 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  max-width: 50%;
+  font-size: calc(var(--f-large) - 1rem);
+}
+
+.card-btn {
+  grid-area: btn;
+  border: 2px solid var(--Black);
+  padding: 0.5rem 2rem;
+  text-align: center;
+  max-width: 60%;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .earth {
-  background: url("./images/mobile/image-deep-earth.jpg") no-repeat center
-    center;
+  background: url("./images/mobile/image-deep-earth.jpg") no-repeat top
+    right/cover;
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-deep-earth.jpg") no-repeat top
+      right/cover;
+  }
 }
 
 .arcade {
   background: url("./images/mobile/image-night-arcade.jpg") no-repeat center
     center;
+
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-night-arcade.jpg") no-repeat top
+      right/cover;
+  }
 }
 
 .soccer {
   background: url("./images/mobile/image-soccer-team.jpg") no-repeat center
     center;
+
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-soccer-team.jpg") no-repeat top
+      right/cover;
+  }
 }
 
 .grid {
   background: url("./images/mobile/image-grid.jpg") no-repeat center center;
+
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-grid.jpg") no-repeat top right/cover;
+  }
 }
 
 .above {
   background: url("./images/mobile/image-from-above.jpg") no-repeat center
     center;
+
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-from-above.jpg") no-repeat top
+      right/cover;
+  }
 }
 
 .borealis {
   background: url("./images/mobile/image-pocket-borealis.jpg") no-repeat center
     center;
+
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-pocket-borealis.jpg") no-repeat top
+      right/cover;
+  }
 }
 
 .curiosity {
   background: url("./images/mobile/image-curiosity.jpg") no-repeat center center;
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-curiosity.jpg") no-repeat top
+      right/cover;
+  }
 }
 
 .fisheye {
   background: url("./images/mobile/image-fisheye.jpg") no-repeat center center;
+  @media (min-width: 850px) {
+    background: url("./images/desktop/image-fisheye.jpg") no-repeat top
+      right/cover;
+  }
 }
-/* <===================  ===================> */
-/* <===================  ===================> */
+
+/* <=================== Footer ===================> */
+footer {
+  background: var(--Black);
+  color: var(--White);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* <===================  Responsive ===================> */
+@media screen and (min-width: 850px) {
+  :root {
+    --f-normal: 1.2rem;
+  }
+  .navbar {
+    padding: 2rem;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 25rem;
+  }
+
+  .nav-item a,
+  .nav-item a:visited {
+    font-size: var(--f-normal);
+    text-transform: capitalize;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+
+  .hero {
+    justify-content: flex-start;
+  }
+  .hero-img {
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("./images/desktop/image-hero.jpg") no-repeat top center;
+    background-size: cover;
+    height: 80%;
+  }
+
+  .hero-content {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .hero-box {
+    padding: 2rem;
+    max-width: 40rem;
+  }
+
+  .about {
+    margin: 1rem 4rem;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+
+  .about img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .about-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: var(--White);
+    padding: 4rem;
+    max-width: 600px;
+    margin: 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .creations {
+    margin: 5rem 0;
+    width: 100%;
+    grid-template-areas:
+      "header btn"
+      "content content";
+  }
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    padding: 15rem 7rem;
+  }
+  .creations > h1 {
+    text-align: left;
+  }
+  .card-btn {
+    justify-self: end;
+  }
+
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-list {
+    flex-direction: row;
+  }
+
+  .footer-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}

@@ -13,8 +13,8 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav class="navbar">
+  <body class="">
+    <nav class="navbar container">
       <!-- Logo -->
       <a href="#" class="logo">
         <img src="./images/logo.svg" alt="Loopstudios Logo" />
@@ -24,6 +24,14 @@
       <button class="nav-icon" id="open-menu">
         <img src="./images/icon-hamburger.svg" alt="Open menu" />
       </button>
+
+      <ul class="nav-list desktop-nav">
+        <li class="nav-item"><a href="#About" class="">About</a></li>
+        <li class="nav-item"><a href="#Careers" class="">Careers</a></li>
+        <li class="nav-item"><a href="#Events" class="">Events</a></li>
+        <li class="nav-item"><a href="#Products" class="">Products</a></li>
+        <li class="nav-item"><a href="#Support" class="">Support</a></li>
+      </ul>
 
       <div class="nav-menu" id="nav-menu">
         <div class="nav-header">
@@ -45,13 +53,22 @@
     </nav>
 
     <section class="hero" id="hero">
-      <div class="hero-box">
-        <h1>Immersive experiences that deliver</h1>
+      <div class="hero-img"></div>
+      <div class="hero-content">
+        <div class="hero-box">
+          <h1>Immersive experiences that deliver</h1>
+        </div>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <img src="./images/mobile/image-interactive.jpg" alt="" />
+    <section class="about container" id="about">
+      <picture>
+        <source
+          srcset="./images/desktop/image-interactive.jpg"
+          media="(min-width: 768px)"
+        />
+        <img src="./images/mobile/image-interactive.jpg" alt="" />
+      </picture>
       <div class="about-content">
         <h1>The leader in interactive VR</h1>
         <p>
@@ -65,7 +82,7 @@
 
     <section class="creations" id="creations">
       <h1>Our creations</h1>
-      <div>See all</div>
+      <h3 class="card-btn">See all</h3>
       <div class="cards">
         <div class="card earth">
           <h1>Deep earth</h1>
@@ -95,22 +112,40 @@
     </section>
 
     <footer>
-      <div class="">
-        <img src="" alt="" />
-        <ul class="">
-          <li class="">About</li>
-          <li class="">Careers</li>
-          <li class="">Events</li>
-          <li class="">Products</li>
-          <li class="">Support</li>
-        </ul>
+      <div class="footer container">
         <div>
-          <a href=""><i></i></a>
-          <a href=""><i></i></a>
-          <a href=""><i></i></a>
-          <a href=""><i></i></a>
+          <img src="./images/logo.svg" alt="" />
+          <ul class="footer-list">
+            <li class="footer-item">About</li>
+            <li class="footer-item">Careers</li>
+            <li class="footer-item">Events</li>
+            <li class="footer-item">Products</li>
+            <li clas="footer-item">Support</li>
+          </ul>
         </div>
-        <p>© 2021 Loopstudios. All rights reserved.</p>
+        <div>
+          <div class="footer-icons">
+            <a href="#"
+              ><img src="./images/icon-facebook.svg" alt="" class="footer-icon"
+            /></a>
+            <a href="#"
+              ><img src="./images/icon-twitter.svg" alt="" class="footer-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="./images/icon-pinterest.svg"
+                alt=""
+                class="footer-icon"
+            /></a>
+            <a href="#"
+              ><img
+                src="./images/icon-instagram.svg"
+                alt=""
+                class="footer-icon"
+            /></a>
+          </div>
+          <p>© 2021 Loopstudios. All rights reserved.</p>
+        </div>
       </div>
     </footer>
     <script type="text/javascript" src="main.js"></script>
