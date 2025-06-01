@@ -231,5 +231,25 @@ p {
 .fisheye {
   background: url("./images/mobile/image-fisheye.jpg") no-repeat center center;
 }
-/* <===================  ===================> */
+
+/* <=================== Footer ===================> */
+.footer {
+  background: var(--Black);
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+.footer-item {
+  margin-bottom: 1.5rem;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 1rem;
+}
+
 /* <===================  ===================> */
