@@ -13,8 +13,8 @@
     <title>Frontend Mentor | Loopstudios landing page</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav class="navbar">
+  <body class="">
+    <nav class="navbar container">
       <!-- Logo -->
       <a href="#" class="logo">
         <img src="./images/logo.svg" alt="Loopstudios Logo" />
@@ -24,6 +24,14 @@
       <button class="nav-icon" id="open-menu">
         <img src="./images/icon-hamburger.svg" alt="Open menu" />
       </button>
+
+      <ul class="nav-list desktop-nav">
+        <li class="nav-item"><a href="#About" class="">About</a></li>
+        <li class="nav-item"><a href="#Careers" class="">Careers</a></li>
+        <li class="nav-item"><a href="#Events" class="">Events</a></li>
+        <li class="nav-item"><a href="#Products" class="">Products</a></li>
+        <li class="nav-item"><a href="#Support" class="">Support</a></li>
+      </ul>
 
       <div class="nav-menu" id="nav-menu">
         <div class="nav-header">
@@ -45,13 +53,19 @@
     </nav>
 
     <section class="hero" id="hero">
-      <div class="hero-box">
+      <div class="container hero-box">
         <h1>Immersive experiences that deliver</h1>
       </div>
     </section>
 
     <section class="about" id="about">
-      <img src="./images/mobile/image-interactive.jpg" alt="" />
+      <picture>
+        <source
+          srcset="./images/desktop/image-interactive.jpg"
+          media="(min-width: 768px)"
+        />
+        <img src="./images/mobile/image-interactive.jpg" alt="" />
+      </picture>
       <div class="about-content">
         <h1>The leader in interactive VR</h1>
         <p>
