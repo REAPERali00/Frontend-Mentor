@@ -315,6 +315,12 @@ p {
   padding: 3rem;
 }
 
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-item {
   margin-bottom: 1.5rem;
 }
@@ -422,5 +428,22 @@ p {
   }
   .card-btn {
     justify-self: end;
+  }
+
+  .footer {
+    flex-direction: row;
+  }
+
+  .footer-list {
+    display: flex;
+    gap: 2rem;
+  }
+  .footer-item {
+    margin-bottom: 0;
+  }
+
+  .footer-icons {
+    display: flex;
+    gap: 1rem;
   }
 }
