@@ -107,6 +107,38 @@ main {
   );
 }
 
+.summary {
+  padding: 2rem;
+}
+
+.score-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+.score-card div:first-child {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: var(--Dark-gray-blue);
+  border: none;
+  color: var(--White);
+  width: 100%;
+  border-radius: 30px;
+  font-weight: var(--fw-large);
+  height: 3rem;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: linear-gradient(
+    var(--Light-slate-blue-background),
+    var(--Light-royal-blue-background)
+  );
+  color: var(--White);
+}
 .attribution {
   font-size: 11px;
   text-align: center;
