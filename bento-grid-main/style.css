@@ -1,3 +1,4 @@
+/* <=====================> Base <=====================>*/
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
 * {
@@ -26,6 +27,43 @@ body {
   font-weight: var(--fw-normal);
 }
 
+main {
+  min-height: 100vh;
+}
+
+/* <=====================> Util classes <=====================>*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-align {
+  display: flex;
+  align-content: center;
+}
+/* <=====================>  Cards<=====================>*/
+.cards {
+  display: grid;
+  grid-template-areas: "1 2 2 3 ", "";
+}
+/* <=====================>  <=====================>*/
+/* <=====================>  <=====================>*/
+
+/* <=====================> Footer <=====================>*/
 .attribution {
   font-size: 11px;
   text-align: center;
