@@ -30,10 +30,13 @@ body {
 main {
   min-height: 100vh;
 }
+img {
+  width: 100%;
+}
 
 /* <=====================> Util classes <=====================>*/
 .container {
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -57,10 +60,73 @@ main {
 }
 /* <=====================>  Cards<=====================>*/
 .cards {
+  color: var(--Black);
   display: grid;
-  grid-template-areas: "1 2 2 3 ", "";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  margin: 2rem;
+  gap: 1rem;
+  grid-template-areas:
+    "create social social schedule "
+    "create social social  schedule"
+    "write manage maintain schedule"
+    "write growth followers followers";
 }
-/* <=====================>  <=====================>*/
+.card {
+  border-radius: 10px;
+  padding: 1rem;
+}
+.card:nth-child(1) {
+  grid-area: create;
+  background: var(--Yellow-100);
+  & button {
+    border: none;
+    background: var(--Yellow-500);
+    color: var(--Purple-500);
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+  }
+  & em {
+    color: var(--Purple-500);
+  }
+}
+
+.card:nth-child(2) {
+  grid-area: social;
+  background-color: var(--Purple-500);
+  color: var(--White);
+}
+
+.card:nth-child(3) {
+  grid-area: schedule;
+  background-color: var(--Purple-100);
+}
+
+.card:nth-child(4) {
+  grid-area: write;
+  background-color: var(--Yellow-500);
+}
+
+.card:nth-child(5) {
+  grid-area: manage;
+}
+
+.card:nth-child(6) {
+  grid-area: growth;
+}
+
+.card:nth-child(7) {
+  grid-area: maintain;
+  background-color: var(--Yellow-500);
+}
+
+.card:nth-child(8) {
+  grid-area: followers;
+  background-color: var(--Purple-500);
+  color: var(--White);
+}
+
 /* <=====================>  <=====================>*/
 
 /* <=====================> Footer <=====================>*/
