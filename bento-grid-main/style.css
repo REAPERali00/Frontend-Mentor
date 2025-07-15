@@ -30,10 +30,13 @@ body {
 main {
   min-height: 100vh;
 }
+img {
+  width: 100%;
+}
 
 /* <=====================> Util classes <=====================>*/
 .container {
-  max-width: 1200px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -61,13 +64,17 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+  margin: 2rem;
   gap: 1rem;
   grid-template-areas:
-    "create create social social"
-    "write write social social"
-    "manage manage schedule besttime"
-    "maintain maintain growth growth"
-    "followers followers growth growth";
+    "create social social schedule "
+    "create social social  schedule"
+    "write manage maintain schedule"
+    "write growth followers followers";
+}
+.card {
+  border-radius: 10px;
+  padding: 1rem;
 }
 .card:nth-child(1) {
   grid-area: create;
@@ -92,21 +99,21 @@ main {
 }
 
 .card:nth-child(3) {
-  grid-area: write;
+  grid-area: schedule;
   background-color: var(--Purple-100);
 }
 
 .card:nth-child(4) {
-  grid-area: manage;
+  grid-area: write;
   background-color: var(--Yellow-500);
 }
 
 .card:nth-child(5) {
-  grid-area: schedule;
+  grid-area: manage;
 }
 
 .card:nth-child(6) {
-  grid-area: besttime;
+  grid-area: growth;
 }
 
 .card:nth-child(7) {
