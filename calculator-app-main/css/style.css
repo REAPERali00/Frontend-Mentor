@@ -3,4 +3,20 @@ body {
   font-family: var(--f-family);
   font-size: var(--f-normal);
   font-weight: var(-fw-normal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, auto);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-light);
 }
